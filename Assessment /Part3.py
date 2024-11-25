@@ -165,10 +165,26 @@ def find_missing_number(arr):
 
 def remove_duplicates_from_sorted_array(arr):
     """Remove duplicates from a sorted array"""
-    pass
+    my_list = []
+    for number in arr:
+        if number not in my_list:
+            my_list.append(number)
+
+    return len(my_list)
+
+
 def search_insert_position(arr, target):
     """Find the position to insert the target in a sorted array"""
-    pass
+    arr.sort()
+    
+    for i in range(len(arr)):
+        if target <= arr[i]:
+            return i
+        else:
+            return len(arr)
+
+
+print(search_insert_position([1, 3, 5, 6], 5))
 
 def max_subarray_sum(nums):
     """Find the maximum sum of a subarray"""

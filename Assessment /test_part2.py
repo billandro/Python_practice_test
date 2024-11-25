@@ -1,5 +1,5 @@
 import unittest
-
+from part2 import *
 
 class TestFunctions(unittest.TestCase):
 
@@ -14,7 +14,6 @@ class TestFunctions(unittest.TestCase):
         self.assertEqual(longest_word_in_sentence("The quick brown fox jumped"), "jumped")
         self.assertEqual(longest_word_in_sentence("Hello world"), "Hello")
         self.assertEqual(longest_word_in_sentence("Quick"), "Quick")
-
         self.assertEqual(longest_word_in_sentence("A B C D E F G H I J K L M N O P"), "P")
 
 if __name__ == '__main__':
